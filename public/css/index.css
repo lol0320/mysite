@@ -154,5 +154,14 @@ transition: all 0.8s;
 	align-items: center;
 }
 .txt-wrapper .txt-wrap{
+text-align: center;
+}
+.txt-wrapper .txt-wrap .title{
+	font-size: 50px;
+	color: #f8f8f8;
+	font-family: "Abril Fatface", Arial, Helvetica, sans-serif;
+}
 
+.txt-wrapper .txt-wrap .title2{
+	color: #f8f8f8;
 }

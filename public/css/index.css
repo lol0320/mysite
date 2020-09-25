@@ -335,7 +335,7 @@ width: 50%;
 	background-color: rgb(3, 3, 3);
 	display: flex;
 	text-align: center;
-
+flex-wrap: wrap;
 }
 .column-wrapper .txt-wrap{
 	width: 50%;
@@ -346,7 +346,7 @@ justify-content: center;
 align-items: center;
 padding: 30px;}
 .column-wrapper .txt-wrap .title1{
-	margin-top: 30px;
+	margin-top: 15px;
 	font-size: 40px;
 	color: #f8f8f8;
  font-family: "Abril Fatface", Arial, Helvetica, sans-serif;
@@ -393,6 +393,9 @@ padding: 30px;}
 	width: 100%;
 	height: 550px;
 position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
 
 }
 .singup-wrapper .singup-wrap{
@@ -403,11 +406,64 @@ position: relative;
 	background-size: 290vh;
 	background-position-y: 30%;
 }
-.singup-wrapper .conbox{
-position: absolute;
+.singup-wrapper  .con-box{
+	position: absolute;
+	display: flex;
+	
+	color: #f8f8f8;
+	
+	border: 1px solid aqua;
+	
+}
+.singup-wrapper  .con-box .txt-box1{
+border: 10px solid #f8f8f8;
+width: 40vw;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 250px;
+margin-right: 5%;
+font-family: "Abril Fatface", Arial, Helvetica, sans-serif;
+
+padding: 2rem;
+}
+.singup-wrapper  .con-box .txt-box1 >div{
+	font-size: 40px;/* font-size: 2vw; */
+	line-height: 1.2;
+}
+
+.singup-wrapper  .con-box .txt-box2{
+background-color: #489094;
+width: 20vw;
+height: 250px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.singup-wrapper  .con-box .txt-box2 .bts{
+	color: #cacaca;
+  width: 140px;
+	height: 50px;
+	line-height: 45px;
+	border: 2px solid #cacaca;
+	border-radius: 0%;
+	font-weight: 700;
+	margin: 0 10px;
+	font-size: 14px;
+	text-align: center;
+}
+
+.singup-wrapper  .con-box .txt-box2 .bts a{display: block;}
+.singup-wrapper  .con-box .txt-box2 .bts:hover{
+	border: 2px solid #f8f8f8;
+	color: #f8f8f8;
 
 }
 
+
+
+
+/**************** 반응형 ******************/
 
 @media screen and (max-width: 1920px){
 	.header-wrapper .navi-wrap .fas{
@@ -439,6 +495,8 @@ position: absolute;
 	.slider-txt2 .slider-title .title{
 		font-size: 15vw;
 	}
+	.singup-wrapper  .con-box .txt-box1 >div{
+		 font-size: 3.5vw; 
 }
 @media screen and (max-width: 1024px){
 	.column-wrapper{
@@ -452,7 +510,8 @@ position: absolute;
 	
 	.column-wrapper .column-wrap {
 		width: 100%;
-		
+		position: absolute;
+		z-index: 9999;
 	}
 }
 

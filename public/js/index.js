@@ -33,9 +33,10 @@ $(".slider-txt1").mouseleave(onSlidLeave);
 	var $btnPrev = $(".slider-txt1 .slider-btn");
 	var $btnNext = $(".slider-txt1 .slider-btn");
 	var $pager;
-	var $slides = [];
+	var $slides = $slideStage.children("div");
+	console.log($slides);
 	var idx = 0;
-	var lastIdx = slides.length - 1;
+	var lastIdx = $slides.length - 1;
 	var interval;
 
 	
@@ -77,4 +78,4 @@ $(".slider-txt1").mouseleave(onSlidLeave);
 		$($slides[idx].clone()).appendTo($slideWrap).stop().animate({"opacity": 1}, 500, slideInit);
 	}
 	
-});
+})();

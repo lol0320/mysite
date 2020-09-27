@@ -9,26 +9,36 @@
 	position: relative;
 	height: 100vh;
 }
-
+.header-wrapper .slider-stage{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
 .header-wrapper .slider-wrapper1 {
 	position: absolute;
+	left: 0;
+	top: 0;
 	background-image: url(../img/home1.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
 	width: 100%;
 	height: 100%;
+	display: none;
+	background-position: 50% 50%;
 }
 
 .header-wrapper .slider-wrapper2 {
 	position: absolute;
-	display: none;
+	left: 0;
+	top: 0;
 	background-image: url(../img/home2.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
 	width: 100%;
 	height: 100%;
+	border: 1px solid aqua;
 }
 
 .header-wrapper .top-wrap {
@@ -417,7 +427,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
+	
 }
 
 .singup-wrapper .singup-wrap {
@@ -425,28 +435,30 @@
 	height: 100%;
 	background: url(../img/singup.jpg) no-repeat left center;
 	background-size: cover;
+	background-attachment: fixed;
+	
 }
 
 .singup-wrapper .con-box {
 	position: absolute;
 	display: flex;
-
+ 
 	color: #f8f8f8;
 
-	border: 1px solid aqua;
 
+  margin: 50px 0;
 }
 
 .singup-wrapper .con-box .txt-box1 {
 	border: 10px solid #f8f8f8;
-	width: 40vw;
+	width: 800px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 250px;
 	margin-right: 5%;
 	font-family: "Abril Fatface", Arial, Helvetica, sans-serif;
-
+	
 	padding: 2rem;
 }
 
@@ -527,8 +539,8 @@
 		font-size: 15vw;
 	}
 
-	.singup-wrapper .con-box .txt-box1 > div {
-		font-size: 3.5vw;
+	.singup-wrapper .con-box .txt-box1{
+		width: 73vw;
 	}
 }
 
@@ -554,6 +566,20 @@
 @media screen and (max-width: 799px) {
 	.slider-txt .slider-title1 .title {
 
+	}
+}
+
+@media screen and (max-width: 657px){
+	.singup-wrapper .con-box{
+		flex-direction: column;
+	}
+	.singup-wrapper .con-box .txt-box2{
+		width:73vw;
+		height: 180px;
+		margin-top: 30px;
+	}
+	.singup-wrapper .con-box .txt-box1 > div{
+		font-size: 7vw;
 	}
 }
 

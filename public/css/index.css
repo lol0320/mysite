@@ -33,7 +33,7 @@ x50{height: 50%;}
 	background-attachment: fixed;
 	width: 100%;
 	height: 100%;
-	display: none;
+	/* display: none; */
 	background-position: 50% 50%;
 }
 
@@ -334,7 +334,7 @@ x50{height: 50%;}
 
 	width: 100%;
 	height: 350px;
-	background-color: #121212;
+	background-color: #141416;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -362,7 +362,7 @@ x50{height: 50%;}
 .column-wrapper {
 	width: 100%;
 	
-	background-color: rgb(3, 3, 3);
+	background-color: #121212;
 	display: flex;
 	text-align: center;
 	
@@ -393,7 +393,7 @@ x50{height: 50%;}
 
 .column-wrapper .txt-wrap .title3 {
 	margin: 20px 0;
-	line-height: 1.6;
+	line-height: 2;
 
 }
 
@@ -655,6 +655,151 @@ height: 25vw;
 .piclink-wrapper .piclink-wrap .pic-wrap .pic>img:nth-child(1){margin-bottom: 0.5vw;}
 .piclink-wrapper .piclink-wrap .pic-wrap .pic>img:nth-child(2){margin-bottom: 0.5vw;}
 
+.gl-wrapper{
+	width: 100%;
+	height: 600px;
+	background-color: #141416;
+}
+.new-wrapper {
+	width: 100%;
+	
+	background-color: #121212;
+	display: flex;
+	
+	
+}
+
+.new-wrapper .title-wrapper {
+	width: 50%;
+	height: 750px;
+	color: #f8f8f8;
+	
+	
+	
+}
+.new-wrapper .title-wrapper .title-wrap1{
+	height: 270px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.new-wrapper .title-wrapper .title-wrap2{
+	height: 180px;
+	display: flex;
+	padding: 0 50px;
+	
+/* 	justify-content: center;
+	align-items: center;
+	 */
+}
+.new-wrapper .title-wrapper .title1{
+	margin-top: 15px;
+	font-size: 40px;
+	color: #f8f8f8;
+	font-family: "Abril Fatface", Arial, Helvetica, sans-serif;
+}
+
+.new-wrapper .title-wrapper .title2 {
+	
+	letter-spacing: 3px;
+	margin: 12px 0;
+}
+	.new-wrapper .title-wrapper .title-wrap2 .box1{
+	
+	
+	}
+.new-wrapper .title-wrapper .title-wrap2 .con{
+
+	width: 150px;
+ height: 130px;
+ margin: 0 20px;
+}
+.new-wrapper .title-wrapper .title-wrap2 .con>img{
+	width: 100%;
+	height: 100%;
+	
+}
+
+.new-wrapper .title-wrapper .title-wrap2 .box1 .s0{
+	font-family: "Abril Fatface", Arial, Helvetica, sans-serif;
+font-size: 25px;
+}
+.new-wrapper .title-wrapper .title-wrap2 .box1 .s1{
+	font-size: 15px;
+	padding-bottom: 15px;
+}
+.new-wrapper .title-wrapper .title-wrap2 .box1 .s2{
+	font-size: 15px;
+	margin-bottom: 15px;
+	line-height: 2;
+}
+.new-wrapper .new-wrap {
+	width: 50%;
+	height: 750px;
+	color: #f8f8f8;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.new-wrapper .new-wrap .bg{
+	background: url(../img/testimonials_bg1.jpg);
+	width: 100%;
+	height: 100%;
+}
+.new-wrapper .new-wrap .abso{
+	position: absolute;
+
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+}
+.new-wrapper .new-wrap .abso .title-wrap1{
+	height: 220px;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+}
+.new-wrapper .new-wrap .abso .title-wrap1 .title1{
+	margin-top: 15px;
+	font-size: 40px;
+	color: #f8f8f8;
+	font-family: "Abril Fatface", Arial, Helvetica, sans-serif;
+}
+
+.new-wrapper .new-wrap .abso .title-wrap1 .title2 {
+ letter-spacing: 3px;
+	margin: 12px 0;
+}
+.new-wrapper .new-wrap .abso .news-box1{
+	
+}
+.new-wrapper .new-wrap .abso .news-box1>img{
+	
+	border-radius: 50%;
+	margin-bottom: 25px;
+}
+.new-wrapper .new-wrap .abso .news-box1 .txt{
+	line-height: 1.8;
+	font-size: 20px;
+}
+.new-wrapper .new-wrap .abso .news-box1 .txt >span{
+	display: block;
+	padding: 25px 0;
+}
+.new-wrapper .new-wrap .abso .news-box1 .btn{
+
+}
+.new-wrapper .new-wrap .abso .news-box1 .btn>span{
+	
+}
 /**************** 반응형 ******************/
 
 @media screen and (max-width: 1920px) {
@@ -667,7 +812,15 @@ height: 25vw;
 		width: 20vw;
 		height: 20vw;
 	}
+	.gl-wrap> img{
+		width: 95vw;
+			}
 }
+
+.new-wrapper{
+	width: 100%;
+}
+.new-wrapper .title-wrapper{}
 @media screen and (max-width: 1100px) {
 	.header-wrapper .top-wrap {
 		background-color: #0c0c0c;
@@ -702,7 +855,12 @@ height: 25vw;
 	.singup-wrapper .con-box .txt-box1{
 		width: 73vw;
 	}
+
 }
+
+
+
+
 
 @media screen and (max-width: 1024px) {
 	.column-wrapper {

@@ -118,7 +118,9 @@ height: 100%;
 .header-wrapper .navi-wrap .navi>a {
 	display: block;
 }
-
+.header-wrapper .top-wrap .bars-navi{
+	display: none;
+}
 .header-wrapper .top-wrap .fas {
 	color: #5aa4ac;
 	font-size: 20px;
@@ -1068,10 +1070,10 @@ footer .f-r ul li>i:nth-child(3) {
 		position: absolute;
 		right: 50px;
 	 display: block;
-	
+	 
 	
 	}
-	.top-wrap .bars-navi{
+	.header-wrapper .top-wrap .bars-navi{
 		position: absolute;
 		top: 65px;
 		background-color: #0c0c0c;
@@ -1079,13 +1081,21 @@ footer .f-r ul li>i:nth-child(3) {
 		width: 100%;
 		
 	}
-	.top-wrap .bars-navi>.b-navi{
+	.header-wrapper .top-wrap .bars-navi>.b-navi{
+		display: none;
 		width: 100%;
 		height: 50px;
 		font-size: 13px;
 		line-height: 50px;
 		color: #f8f8f8;
 		padding-left: 30px;
+		border-bottom: 1px solid #a3a3a317;
+	}
+	.header-wrapper .top-wrap .bars-navi>.b-navi:nth-child(1){
+		background-color:#5aa4ac;
+	}
+	.header-wrapper .top-wrap .bars-navi>.b-navi:hover{
+		background-color:#5aa4ac;
 	}
 	.slider-txt1 .slider-title .title {
 		font-size: 15vw;

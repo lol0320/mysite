@@ -22,7 +22,7 @@ function onResize() {
 	topToggle();
 }
 
-function onSlidEnter() {
+/* function onSlidEnter() {
 	$(this).find(".slider-btn .btn").css("display", "block");
 }
 
@@ -37,26 +37,64 @@ function onImgEnter(){
 function onImgLeave(){
 	$(this).find(".new-wrap .abso2").css("display","none")
 	$(this).find(".new-wrap .abso").css("display","block")
-}
+} */
 
-function onMainEnter(){
-	$(this).find(".slider-stage .slider-wrapper2").css({opacity:"1", transition:"all 0.7s"})
-	$(this).find(".slider-stage .slider-wrapper1").css({opacity:"0", transition:"all 0.7s"})
-}
-function onMainLeave(){
-	$(this).find(".slider-stage .slider-wrapper1").css({opacity:"1", transition:"all 0.7s"})
-	$(this).find(".slider-stage .slider-wrapper2").css({opacity:"0", transition:"all 0.7s"})
-}
+ 
+	var $slideWrap = $(".header-wrapper .slider-stage");
+	var $slides =$(".header-wrapper .slider-wrap");
+	var $btnPrev = $(".slider-stage .btn-prev");
+	var $btnNext = $(".slider-stage .btn-next");
+	var idx=0;
+
+	
+
+	$btnPrev.click(onPrev);
+	$btnNext.click(onNext);
+
+
+
+	function onPrev() {
+		if(idx == 0) idx = 1;
+		else idx = 0;
+		ani();
+	}
+	
+	function onNext() {
+		if(idx == 0) idx = 1;
+		else idx = 0;
+		
+		ani();
+	}
+
+	function ani() {
+		var $slide = $(".slider-wrap > div");
+		$slide.eq(idx).css({
+			opacity: 1
+			
+		});
+		$slide.eq(idx).siblings().css({
+			opacity: 0
+			
+		});
+	
+	}
+setInterval(onNext,8000);
+
+ 
+
 
 $(window).scroll(onScroll).trigger("scroll");
 $(window).resize(onResize).trigger("resize");
-$(".slider-txt1").mouseenter(onSlidEnter);
-$(".slider-txt1").mouseleave(onSlidLeave);
 
 
-$(".new-wrapper").mouseenter(onImgEnter);
-$(".new-wrapper").mouseleave(onImgLeave);
+
+function onNaviEnter(){
+	$(this).find(".sub-navi").css("display", "block");
+};
+function onNaviLeave(){
+	$(this).find(".sub-navi").css("display", "none");	
+};
 
 
-$(".header-wrapper").mouseenter(onMainEnter);
-$(".header-wrapper").mouseleave(onMainLeave);
+ $(".top-wrap").mouseenter(onNaviEnter);
+ $(".top-wrap").mouseleave(onNaviLeave);

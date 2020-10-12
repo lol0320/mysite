@@ -11,7 +11,7 @@
 
 .x100 {flex: calc(100% - 32px) 0 0; margin: 16px;}
 .x50 {flex: calc(50% - 32px) 0 0; margin: 16px;}
-.x33 {flex: calc(33.3333% - 32px) 0 0; margin: 16px;}
+.x33 {flex: calc(33.3333% - 16px) 0 0; margin: 8px;}
 /* header-wrapper */
 .header-wrapper {
 width: 100%;
@@ -643,17 +643,31 @@ height: 100%;
 }
 
 /* .piclink-wrapper */
-.piclink-wrapper{width: 100%;}
-.piclink-wrapper .pic-wrap{}
-.piclink-wrapper
-.piclink-wrapper
+.piclink-wrapper{width: 100%; background-color: #141416; display: flex;}
+.piclink-wrapper .pic-l{width: 33.3333%;}
+.piclink-wrapper .pic-r1{width: 33.3333%;}
+.piclink-wrapper .pic-r2{width: 33.3333%;}
+.piclink-wrapper .pic-l .pic{padding: 4px 8px 0px 0px}
+.piclink-wrapper .pic-r1 .pic{padding: 4px 4px 4px 0px;}
+.piclink-wrapper .pic-r2 .pic{padding: 4px 0px 4px 4px;}
+
+.piclink-wrapper .pic-l .pic>img{width: 100%;}
+.piclink-wrapper .pic-r1 .pic>img{width: 100%;}
+.piclink-wrapper .pic-r2 .pic>img{width: 100%;}
+.piclink-wrapper .pic:hover>img{background-color: #4ca8b3;}
 
 .gl-wrapper {
 	width: 100%;
 	height: 600px;
 	background-color: #141416;
+	
 }
-
+.gl-wrapper .gl-wrap{
+	width: 100%;
+	background-color: #141416;	
+	text-align: center;
+	padding-bottom: 100px;
+}
 .new-wrapper {
 	width: 100%;
 

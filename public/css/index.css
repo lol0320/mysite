@@ -649,12 +649,20 @@ height: 100%;
 .piclink-wrapper .pic-r2{width: 33.3333%;}
 .piclink-wrapper .pic-l .pic{padding: 4px 8px 0px 0px}
 .piclink-wrapper .pic-r1 .pic{padding: 4px 4px 4px 0px;}
-.piclink-wrapper .pic-r2 .pic{padding: 4px 0px 4px 4px;}
+.piclink-wrapper .pic-r2 .pic1{padding: 4px 0px 4px 4px;}
+.piclink-wrapper .pic-r2 .pic2{padding: 4px 0px 4px 4px;}
 
+
+.piclink-wrapper .pic-l .pic{ background-color: #4ca8b3;}
 .piclink-wrapper .pic-l .pic>img{width: 100%;}
 .piclink-wrapper .pic-r1 .pic>img{width: 100%;}
-.piclink-wrapper .pic-r2 .pic>img{width: 100%;}
-.piclink-wrapper .pic:hover>img{background-color: #4ca8b3;}
+.piclink-wrapper .pic-r2 .pic1>img{width: 100%;}
+.piclink-wrapper .pic-r2 .pic2>img{width: 100%;}
+
+.piclink-wrapper .pic-l .pic>div{width: 100%; }
+.piclink-wrapper .pic-r1 .pic>div{width: 100%;}
+.piclink-wrapper .pic-r2 .pic1>div{width: 100%;}
+.piclink-wrapper .pic-r2 .pic2>div{width: 100%;}
 
 .gl-wrapper {
 	width: 100%;
@@ -1228,13 +1236,14 @@ footer .f-r ul li>i:nth-child(3) {
 }
 
 @media screen and (max-width: 916px){
-	.piclink-wrapper{}
-	.piclink-wrapper .piclink-wrap{}
-	.piclink-wrapper .piclink-wrap .picp>img{	width: 50vw; margin-right: 1vw;}
-	.piclink-wrapper .piclink-wrap .pic-wrap{}
-	.piclink-wrapper .piclink-wrap .pic-wrap >.pic{}
-	.piclink-wrapper .piclink-wrap .pic-wrap >.pic>img{width: 47vw;
-		height: 39vw;}
+	.piclink-wrapper{flex-wrap: wrap;}
+.piclink-wrapper .pic-l{width: 50%;}
+.piclink-wrapper .pic-r1{width: 50%;}
+.piclink-wrapper .pic-r2{width: 100%; display: flex;}
+.piclink-wrapper .pic-l .pic{padding: 4px 4px 0px 0px}
+.piclink-wrapper .pic-r1 .pic{padding: 4px 0px 4px 4px;}
+.piclink-wrapper .pic-r2 .pic1{padding: 4px 4px 4px 0px;}
+.piclink-wrapper .pic-r2 .pic2{padding: 4px 0px 4px 4px;}
 }
 @media screen and (max-width: 799px) {
 	.slider-txt .slider-title1 .title {}
@@ -1263,6 +1272,18 @@ footer .f-r ul li>i:nth-child(3) {
 		padding: 20px 0;
 
 	}
+}
+@media screen and (max-width: 731px){
+	.piclink-wrapper{flex-wrap: wrap;}
+	.piclink-wrapper .pic-l{width: 100%;}
+	.piclink-wrapper .pic-r1{width: 100%;}
+	.piclink-wrapper .pic-r2{width: 100%; display: flex; flex-direction: column;}
+	.piclink-wrapper .pic-l .pic{padding: 4px 0;}
+	.piclink-wrapper .pic-r1 .pic{padding: 4px 0;}
+	.piclink-wrapper .pic-r2 .pic1{padding: 4px 0;}
+	.piclink-wrapper .pic-r2 .pic2{padding: 4px 0;}
+	
+
 }
 
 @media screen and (max-width: 657px) {

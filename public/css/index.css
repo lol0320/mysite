@@ -644,25 +644,37 @@ height: 100%;
 
 /* .piclink-wrapper */
 .piclink-wrapper{width: 100%; background-color: #141416; display: flex;}
-.piclink-wrapper .pic-l{width: 33.3333%;}
-.piclink-wrapper .pic-r1{width: 33.3333%;}
-.piclink-wrapper .pic-r2{width: 33.3333%;}
-.piclink-wrapper .pic-l .pic{padding: 4px 8px 0px 0px}
-.piclink-wrapper .pic-r1 .pic{padding: 4px 4px 4px 0px;}
-.piclink-wrapper .pic-r2 .pic1{padding: 4px 0px 4px 4px;}
-.piclink-wrapper .pic-r2 .pic2{padding: 4px 0px 4px 4px;}
+.piclink-wrapper .pic-wrap .pic-l{width: 33.3333%;}
+.piclink-wrapper .pic-wrap .pic-r1{width: 33.3333%;}
+.piclink-wrapper .pic-wrap .pic-r2{width: 33.3333%;}
+.piclink-wrapper .pic-l .pic{margin: 4px 8px 0px 0px;position: relative;}
+.piclink-wrapper .pic-r1 .pic{margin: 4px 4px 8px 0px;position: relative;}
+.piclink-wrapper .pic-r2 .pic{margin:  4px 0px 8px 4px;position: relative;}
 
 
-.piclink-wrapper .pic-l .pic{ background-color: #4ca8b3;}
-.piclink-wrapper .pic-l .pic>img{width: 100%;}
+.piclink-wrapper .pic-l .pic>img{width: 100%; }
 .piclink-wrapper .pic-r1 .pic>img{width: 100%;}
-.piclink-wrapper .pic-r2 .pic1>img{width: 100%;}
-.piclink-wrapper .pic-r2 .pic2>img{width: 100%;}
+.piclink-wrapper .pic-r2 .pic>img{width: 100%;}
 
-.piclink-wrapper .pic-l .pic>div{width: 100%; }
-.piclink-wrapper .pic-r1 .pic>div{width: 100%;}
-.piclink-wrapper .pic-r2 .pic1>div{width: 100%;}
-.piclink-wrapper .pic-r2 .pic2>div{width: 100%;}
+
+.piclink-wrapper .pic-l .pic>div{width: 100%; position: absolute; background-color: rgba(76,169,180,0.8); opacity: 0; transition:all 0.8s; height: 100%; top: 0; left: 0;}
+.piclink-wrapper .pic-r1 .pic>div{width: 100%; position: absolute; background-color: rgba(76,169,180,0.8); opacity: 0; transition:all 0.8s; height: 100%; top: 0; left: 0;}
+.piclink-wrapper .pic-r2 .pic>div{width: 100%; position: absolute; background-color: rgba(76,169,180,0.8); opacity: 0; transition:all 0.8s; height: 100%; top: 0; left: 0;}
+
+.piclink-wrapper .pic-l .pic>div .icon{width: 100%; height: 100%; display: flex; justify-items: center; align-items: center; text-align: center; position: absolute;  }
+.piclink-wrapper .pic-l .pic>div .icon>p{ cursor: pointer; border:1px solid #222; border-radius: 50%; width: 50px; height: 50px; background-color: #222; color: #fff; text-align: center; line-height: 50px; font-size: 20px; margin: 5px;}
+
+.piclink-wrapper .pic-r1 .pic>div .icon{width: 100%; height: 100%; display: flex; justify-items: center; align-items: center; text-align: center; position: absolute;  }
+.piclink-wrapper .pic-r1 .pic>div .icon>p{ cursor: pointer; border:1px solid #222; border-radius: 50%; width: 50px; height: 50px; background-color: #222; color: #fff; text-align: center; line-height: 50px; font-size: 20px; margin: 5px;}
+
+.piclink-wrapper .pic-r2 .pic>div .icon{width: 100%; height: 100%; display: flex; justify-items: center; align-items: center; text-align: center; position: absolute;  }
+.piclink-wrapper .pic-r2 .pic>div .icon>p{ cursor: pointer; border:1px solid #222; border-radius: 50%; width: 50px; height: 50px; background-color: #222; color: #fff; text-align: center; line-height: 50px; font-size: 20px; margin: 5px;}
+
+.piclink-wrapper .pic-l .pic:hover> div{opacity: 0.8;}
+.piclink-wrapper .pic-r1 .pic:hover> div{opacity: 0.8;}
+.piclink-wrapper .pic-r2 .pic:hover> div{opacity: 0.8;}
+
+.piclink-wrapper .pic-l .pic>div .icon>p:hover>{background-color: #111;}
 
 .gl-wrapper {
 	width: 100%;
@@ -988,6 +1000,7 @@ footer {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	position: relative;
 }
 
 footer .f-l {
@@ -1035,7 +1048,11 @@ footer .f-r ul li>i:nth-child(3) {
 	margin: 0 0;
 }
 
+.scroll-wrap {position: sticky; bottom: 0; opacity: 0.8;}
+.scroll-wrap .topScroll{ position: absolute; right: 30px; bottom: 0; 
+width: 50px;height: 40px; display: flex; justify-items: center; align-items: center; background-color: #444; text-align: center; color: #fff; font-size: 20px; border-radius: 5px 5px 0 0 ;}
 
+.scroll-wrap .topScroll a{display: block; width: 100%; height: 100%;}
 /**************** 반응형 ******************/
 
 @media screen and (max-width: 1920px) {
@@ -1240,10 +1257,12 @@ footer .f-r ul li>i:nth-child(3) {
 .piclink-wrapper .pic-l{width: 50%;}
 .piclink-wrapper .pic-r1{width: 50%;}
 .piclink-wrapper .pic-r2{width: 100%; display: flex;}
-.piclink-wrapper .pic-l .pic{padding: 4px 4px 0px 0px}
-.piclink-wrapper .pic-r1 .pic{padding: 4px 0px 4px 4px;}
-.piclink-wrapper .pic-r2 .pic1{padding: 4px 4px 4px 0px;}
-.piclink-wrapper .pic-r2 .pic2{padding: 4px 0px 4px 4px;}
+.piclink-wrapper .pic-l .pic{margin: 4px 4px 0px 0px}
+.piclink-wrapper .pic-r1 .pic{margin: 4px 0px 4px 4px;}
+.piclink-wrapper .pic-r1 .pic:nth-child(1){margin: 4px 0px 8px 4px;}
+.piclink-wrapper .pic-r2 .pic{margin: 4px 0 4px 4px;}
+.piclink-wrapper .pic-r2 .pic:nth-child(1){margin: 4px 4px 4px 0px;}
+.header-wrapper .navi-wrap{padding-right: 0;}
 }
 @media screen and (max-width: 799px) {
 	.slider-txt .slider-title1 .title {}
@@ -1278,10 +1297,11 @@ footer .f-r ul li>i:nth-child(3) {
 	.piclink-wrapper .pic-l{width: 100%;}
 	.piclink-wrapper .pic-r1{width: 100%;}
 	.piclink-wrapper .pic-r2{width: 100%; display: flex; flex-direction: column;}
-	.piclink-wrapper .pic-l .pic{padding: 4px 0;}
-	.piclink-wrapper .pic-r1 .pic{padding: 4px 0;}
-	.piclink-wrapper .pic-r2 .pic1{padding: 4px 0;}
-	.piclink-wrapper .pic-r2 .pic2{padding: 4px 0;}
+	.piclink-wrapper .pic-l .pic{margin: 4px 0;}
+	.piclink-wrapper .pic-r1 .pic{margin: 4px 0;}
+	.piclink-wrapper .pic-r2 .pic{margin: 4px 0;}
+	.piclink-wrapper .pic-r2 .pic:nth-child(1){margin-right: 0;}
+	
 	
 
 }

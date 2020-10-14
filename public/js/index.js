@@ -1,6 +1,7 @@
+
 function topToggle() {
 	var sct = $(this).scrollTop();
-	if($(window).outerWidth() > 1100) {  // PC
+if($(window).outerWidth() > 1100) {  // PC
 		if (sct > 0) {
 			$(".header-wrapper .top-wrap").css("background-color", "rgba(0,0,0,0.8)");
 		}
@@ -21,6 +22,14 @@ function onScroll() {
 function onResize() {
 	topToggle();
 }
+ 
+
+
+
+
+
+
+
 
 
 $(".top-wrap .fas").click( function() {
@@ -28,6 +37,27 @@ $(".top-wrap .fas").click( function() {
 
 	});
 });
+
+
+
+
+(function() {
+	$(".header-wrapper").scroll( function() {
+		if ( $(window).scrollTop() > 1583) {
+			$(".scroll-wrap").fadeIn();
+		} else {
+			$(".scroll-wrap").fadeOut();
+		}
+	} );
+
+	$(".scroll-wrap").click( function() {
+		$(window).animate( { scrollTop : 0 },1000);
+		
+	} );
+} );
+
+
+
 
 
 
@@ -150,10 +180,10 @@ function onNaviLeave(){
  $(".top-wrap .on").mouseleave(onNaviLeave);
 
 
- $(".piclink-wrapper").hover(function() {
-  $(this).find(".pic>div").css("background-color", "#4ca8b3");
+/*  $(".piclink-wrapper").hover(function() {
+  $(this).find(".pic>div").css();
 }, function(){
   $(this).find(".pic>div").css("background-color", "#4ca8b3");
 });
-
+ */
 

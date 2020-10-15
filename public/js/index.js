@@ -23,23 +23,11 @@ function onResize() {
 	topToggle();
 }
  
-
-
-
-
-
-
-
-
-
 $(".top-wrap .fas").click( function() {
 	$(".bars-navi").slideToggle(500, function(){
 
 	});
 });
-
-
-
 
 $(".scroll-wrap").click(function(){
 	$('html').animate( { scrollTop : 0 } )
@@ -58,10 +46,7 @@ $(".scroll-wrap").click(function(){
 	});
 
 
-
-
-
- (function(){
+(function(){
 	var $slideWrap = $(".header-wrapper .slider-stage");
 	var $slides =$(".header-wrapper .slider-wrap");
 	var $btnPrev = $(".slider-stage .btn-prev");

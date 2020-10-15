@@ -47,8 +47,7 @@ $(".scroll-wrap").click(function(){
 
 
 (function(){
-	var $slideWrap = $(".header-wrapper .slider-stage");
-	var $slides =$(".header-wrapper .slider-wrap");
+
 	var $btnPrev = $(".slider-stage .btn-prev");
 	var $btnNext = $(".slider-stage .btn-next");
 	var idx=0;
@@ -89,8 +88,6 @@ setInterval(onNext,8000);
 })();
 
 (function(){
-var $newWrap = $(".new-wrapper .news");
-var $newSlides =$(".new-wrapper .news");
 var $pagerPrev = $(".news .pager1");
 var $pagerNext = $(".news .pager2");
 var idx=0;

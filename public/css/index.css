@@ -46,6 +46,7 @@ height: 100%;
 	background: url(../img/home2.jpg) no-repeat center;
 	background-attachment: fixed;
 	position: absolute;
+opacity: 0;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -1134,7 +1135,7 @@ width: 50px;height: 40px; display: flex; justify-items: center; align-items: cen
 		position: absolute;
 		right: 50px;
 	 display: block;
-	 
+	 cursor: pointer;
 	
 	}
 	.header-wrapper .top-wrap .bars-navi{
@@ -1142,7 +1143,7 @@ width: 50px;height: 40px; display: flex; justify-items: center; align-items: cen
 		position: absolute;
 		top: 65px;
 		background-color: #0c0c0c;
-		
+		cursor: pointer;
 		width: 100%;
 		
 	}
